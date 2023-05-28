@@ -73,14 +73,14 @@ class _DoctorPageWidgetState extends State<DoctorPageWidget> {
     }
 
     var distance = getJsonField(widget.doctor, r'$.distance');
-    String priceText;
+    String pricePP;
     double totalPrice = 0;
 
     if (distance != null && double.parse(distance) <= 30) {
       totalPrice = 12000 * double.parse(distance) * 2;
-      priceText = 'Rp ${totalPrice.toStringAsFixed(0)},00';
+      pricePP = 'Rp ${totalPrice.toStringAsFixed(0)},00';
     } else {
-      priceText = '(Jarak terlalu jauh)';
+      pricePP = '(Jarak terlalu jauh)';
     }
 
     var biayaDokter = getJsonField(widget.doctor, r'''$.price_rate''');
@@ -631,7 +631,7 @@ class _DoctorPageWidgetState extends State<DoctorPageWidget> {
                                               ),
                                         ),
                                         Text(
-                                          priceText,
+                                          pricePP,
                                           // 'Rp${(30000 * double.parse(r'''$.distance''') * 2).toStringAsFixed(2)}',
                                           // r'''$.distance''' != null
                                           //     ? 'Rp${(10000 * double.parse(r'''$.distance''') * 2).toStringAsFixed(2)}'
