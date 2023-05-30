@@ -6,12 +6,11 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:cari_dokter/main.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(MyApp() as Widget);
+    await tester.pumpWidget(MyApp());
   });
 }

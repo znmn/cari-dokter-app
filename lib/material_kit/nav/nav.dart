@@ -107,13 +107,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'OrderDoctorPage',
-          path: '/orderDoctorPage',
-          builder: (context, params) => OrderDoctorPageWidget(
-            doctor: params.getParam('doctor', ParamType.JSON),
-          ),
-        ),
-        FFRoute(
           name: 'ProfilePage',
           path: '/profilePage',
           builder: (context, params) => params.isEmpty

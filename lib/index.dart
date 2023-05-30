@@ -6,8 +6,6 @@ export '/pages/verification_page/verification_page_widget.dart'
     show VerificationPageWidget;
 export '/pages/home_page/home_page_widget.dart' show HomePageWidget;
 export '/pages/doctor_page/doctor_page_widget.dart' show DoctorPageWidget;
-export '/pages/order_doctor_page/order_doctor_page_widget.dart'
-    show OrderDoctorPageWidget;
 export '/pages/profile_page/profile_page_widget.dart' show ProfilePageWidget;
 export '/pages/specialist_page/specialist_page_widget.dart'
     show SpecialistPageWidget;

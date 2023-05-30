@@ -1,16 +1,12 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import '/index.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 
+import '/index.dart';
 import 'auth/firebase_auth/auth_util.dart';
 import 'auth/firebase_auth/firebase_user_provider.dart';
 import 'backend/firebase/firebase_config.dart';
 import 'material_kit/material_kit_theme.dart';
 import 'material_kit/material_kit_util.dart';
-import 'material_kit/internationalization.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,7 +22,6 @@ void main() async {
 }
 
 class MyApp extends StatefulWidget {
-  // This widget is the root of your application.
   @override
   State<MyApp> createState() => _MyAppState();
 
@@ -35,7 +30,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  Locale? _locale;
   ThemeMode _themeMode = ThemeMode.system;
 
   late Stream<BaseAuthUser> userStream;
@@ -66,10 +60,6 @@ class _MyAppState extends State<MyApp> {
     super.dispose();
   }
 
-  void setLocale(String language) {
-    setState(() => _locale = createLocale(language));
-  }
-
   void setThemeMode(ThemeMode mode) => setState(() {
         _themeMode = mode;
       });
@@ -79,14 +69,6 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp.router(
       title: 'Cari Dokter',
       debugShowCheckedModeBanner: false,
-      localizationsDelegates: [
-        FFLocalizationsDelegate(),
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      locale: _locale,
-      supportedLocales: const [Locale('en', '')],
       theme: ThemeData(brightness: Brightness.light),
       themeMode: _themeMode,
       routeInformationParser: _router.routeInformationParser,
