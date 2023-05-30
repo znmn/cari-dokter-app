@@ -37,9 +37,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
 
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
-      if ((valueOrDefault<bool>(currentUserDocument?.isVerified, false) ==
-              null) ||
-          !valueOrDefault<bool>(currentUserDocument?.isVerified, false)) {
+      if (!valueOrDefault<bool>(currentUserDocument?.isVerified, false)) {
         context.goNamed(
           'VerificationPage',
           extra: <String, dynamic>{
