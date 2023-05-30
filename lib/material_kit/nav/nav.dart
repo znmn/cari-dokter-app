@@ -1,6 +1,4 @@
 import 'dart:async';
-import '../../auth/firebase_auth/auth_util.dart';
-import '../material_kit_util.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -65,11 +63,8 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, _) => appStateNotifier.loggedIn
-          ? (currentUserDocument?.isVerified != false
-              ? NavBarPage()
-              : VerificationPageWidget())
-          : OnboardingWidget(),
+      errorBuilder: (context, _) =>
+          appStateNotifier.loggedIn ? NavBarPage() : OnboardingWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
