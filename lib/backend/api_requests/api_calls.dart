@@ -11,7 +11,6 @@ class PbmApiGroup {
     'Secret': 'PBMOnly',
   };
   static GetDoctorsCall getDoctorsCall = GetDoctorsCall();
-  static EstimateFareCall estimateFareCall = EstimateFareCall();
   static GetNewsCall getNewsCall = GetNewsCall();
   static ImgRecognitionCall imgRecognitionCall = ImgRecognitionCall();
 }
@@ -38,43 +37,6 @@ class GetDoctorsCall {
       cache: false,
     );
   }
-}
-
-class EstimateFareCall {
-  Future<ApiCallResponse> call({
-    double? lat1 = -8.164911,
-    double? long1 = 113.703714,
-    double? lat2 = -8.1619791,
-    double? long2 = 113.714938,
-  }) {
-    return ApiManager.instance.makeApiCall(
-      callName: 'estimateFare',
-      apiUrl: '${PbmApiGroup.baseUrl}/estimate',
-      callType: ApiCallType.GET,
-      headers: {
-        ...PbmApiGroup.headers,
-      },
-      params: {
-        'lat1': lat1,
-        'long1': long1,
-        'lat2': lat2,
-        'long2': long2,
-      },
-      returnBody: true,
-      encodeBodyUtf8: false,
-      decodeUtf8: false,
-      cache: false,
-    );
-  }
-
-  dynamic currency(dynamic response) => getJsonField(
-        response,
-        r'''$.currency''',
-      );
-  dynamic pp(dynamic response) => getJsonField(
-        response,
-        r'''$.pp''',
-      );
 }
 
 class GetNewsCall {
