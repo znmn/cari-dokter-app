@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "147052948122",
+    "project_id": "cari-dokter-app",
+    "storage_bucket": "cari-dokter-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147052948122:android:88d1d74804699ff5118d23",
+        "android_client_info": {
+          "package_name": "com.pbm.caridokter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "147052948122-mjs9ke71fvq2l5udi7h2cb5nui8s7ti0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pbm.caridokter",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "147052948122-mn9epn35pjce67kemovuc8842k77bupj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pbm.caridokter",
+            "certificate_hash": "af01b4fabb0efe04a365554f53c8319f3b0b2dcc"
+          }
+        },
+        {
+          "client_id": "147052948122-68qv5pm72isjl4nf2h9l2ua2tbstjmg6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuxQPxvpTmTG4xXSCBiZLGBJX4VbAP_wA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "147052948122-68qv5pm72isjl4nf2h9l2ua2tbstjmg6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "147052948122-8sgqbib74u3abm9r0f7kr8u46q8o7ek8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.pbm.caridokter"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
