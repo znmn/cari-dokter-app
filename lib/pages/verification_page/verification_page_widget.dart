@@ -32,26 +32,6 @@ class _VerificationPageWidgetState extends State<VerificationPageWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => VerificationPageModel());
-
-    // On page load action.
-    SchedulerBinding.instance.addPostFrameCallback((_) async {
-      if (valueOrDefault<bool>(currentUserDocument?.isVerified, false)) {
-        context.goNamed(
-          'HomePage',
-          extra: <String, dynamic>{
-            kTransitionInfoKey: TransitionInfo(
-              hasTransition: true,
-              transitionType: PageTransitionType.fade,
-              duration: Duration(milliseconds: 0),
-            ),
-          },
-        );
-
-        return;
-      } else {
-        return;
-      }
-    });
   }
 
   @override
