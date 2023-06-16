@@ -76,7 +76,9 @@ class _DoctorPageWidgetState extends State<DoctorPageWidget> {
     double totalPrice = 0;
 
     if (distance != null && double.parse(distance) <= 30) {
-      totalPrice = 12000 * double.parse(distance) * 2;
+      final doubleDis = double.parse(distance);
+      totalPrice =
+          doubleDis <= 1 ? (18000 * 2) : ((18000 + (2500 * (doubleDis - 1))) * 2);
       pricePP = 'Rp ${totalPrice.toStringAsFixed(0)}';
     } else {
       pricePP = '(Jarak terlalu jauh)';
